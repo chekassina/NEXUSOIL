@@ -1,0 +1,6 @@
+{
+  "name": "Engine Oil & Automotive Paint Platform",
+  "description": "NexusOil Cameroon - Premium engine oil sales and custom automotive paint matching with instant WhatsApp ordering and specialist tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
