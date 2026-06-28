@@ -4,58 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail, MapPin, MessageCircle, Droplet, Paintbrush, ArrowRight, CheckCircle2 } from 'lucide-react';
-
-export function NexusOilLogo({ className = "h-11 w-11" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Outer Golden Circle */}
-      <circle cx="100" cy="100" r="90" stroke="url(#goldGradient)" strokeWidth="4" fill="none" />
-      
-      {/* Gear teeth on the right */}
-      <g stroke="url(#gearGradient)" strokeWidth="6" fill="none">
-        <path d="M170 60 L180 65 M180 80 L190 85 M185 100 L195 100 M180 120 L190 125 M170 140 L180 145" strokeLinecap="round" strokeWidth="8" />
-        <path d="M165 50 A 90 90 0 0 1 185 110" strokeWidth="12" strokeLinecap="round" />
-      </g>
-      
-      {/* Golden Drop of Oil (Left) */}
-      <path d="M55 45 C55 45 40 70 40 85 C40 98 50 108 63 108 C76 108 86 98 86 85 C86 70 71 45 71 45 C71 45 63 35 55 45 Z" fill="url(#goldGradient)" filter="url(#dropShadow)" />
-      {/* Highlight inside drop */}
-      <path d="M50 70 C50 60 55 52 55 52 C55 52 61 60 61 70 C61 75 58 80 55 80 C52 80 50 75 50 70 Z" fill="white" opacity="0.3" />
-      
-      {/* Main Letter 'N' */}
-      {/* Left leg (black/dark grey) */}
-      <path d="M75 130 L75 55 L105 55 L105 130 Z" fill="#1A1A1A" />
-      {/* Diagonal & Right Leg (Shiny gold) */}
-      <path d="M75 55 L135 130 L165 130 L165 55 L135 55 L135 100 Z" fill="url(#goldGradient)" />
-      
-      {/* Cameroon Flag Wave (Green, Red, Yellow stripes sweeping bottom) */}
-      <path d="M45 125 Q 100 165 155 125" stroke="#E30010" strokeWidth="18" fill="none" />
-      <path d="M45 116 Q 100 156 155 116" stroke="#007A5E" strokeWidth="8" fill="none" />
-      <path d="M45 134 Q 100 174 155 134" stroke="#FCD116" strokeWidth="8" fill="none" />
-      
-      {/* Yellow Star in the center red stripe */}
-      <polygon points="100,133 103,140 110,140 105,144 107,151 100,147 93,151 95,144 90,140 97,140" fill="#FCD116" />
-
-      {/* Gradients */}
-      <defs>
-        <linearGradient id="goldGradient" x1="40" y1="45" x2="165" y2="130" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#FFE082" />
-          <stop offset="35%" stopColor="#FFD54F" />
-          <stop offset="70%" stopColor="#FFB300" />
-          <stop offset="100%" stopColor="#B78103" />
-        </linearGradient>
-        <linearGradient id="gearGradient" x1="150" y1="50" x2="190" y2="150" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#333333" />
-          <stop offset="100%" stopColor="#111111" />
-        </linearGradient>
-        <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
-          <feDropShadow dx="1" dy="2" stdDeviation="2" floodOpacity="0.2" />
-        </filter>
-      </defs>
-    </svg>
-  );
-}
+import { Menu, X, Phone, Mail, MapPin, MessageCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -124,11 +73,15 @@ export default function Layout({ children, activeTab, setActiveTab }: LayoutProp
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <button 
+            <button
               onClick={() => handleNavClick('home')}
               className="flex items-center gap-2.5 text-left group transition-all"
             >
-              <NexusOilLogo className="h-10 w-10 sm:h-12 sm:w-12 transition-transform group-hover:scale-105" />
+              <img
+                src="/images/logo.png"
+                alt="NexusOil Logo"
+                className="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-transform group-hover:scale-105"
+              />
               <div>
                 <span className="block text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 uppercase leading-none">
                   NEXUS<span className="text-amber-500 font-black">OIL</span>
@@ -223,13 +176,18 @@ export default function Layout({ children, activeTab, setActiveTab }: LayoutProp
       <footer className="bg-slate-950 text-slate-300 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
-            
+
             {/* Business Bio */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-white">
-                <NexusOilLogo className="h-11 w-11" />
+                <img
+                  src="/images/logo.png"
+                  alt="NexusOil Logo"
+                  className="h-11 w-11 object-contain"
+                />
                 <span className="text-xl font-extrabold tracking-tight uppercase">
-                  NEXUS<span className="text-amber-500 font-black">OIL</span> <span className="text-[11px] text-slate-400 font-bold block">CAMEROON</span>
+                  NEXUS<span className="text-amber-500 font-black">OIL</span>{' '}
+                  <span className="text-[11px] text-slate-400 font-bold block">CAMEROON</span>
                 </span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed">
@@ -332,7 +290,11 @@ export default function Layout({ children, activeTab, setActiveTab }: LayoutProp
             <div className="bg-emerald-600 text-white p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative h-10 w-10 rounded-full overflow-hidden bg-neutral-900 border border-emerald-500/20">
-                  <img src="'/images/lp1.jpg" alt="NexusOil Logo" className="w-full h-full object-cover" />
+                  <img
+                    src="/images/logo.png"
+                    alt="NexusOil Logo"
+                    className="w-full h-full object-cover"
+                  />
                   <span className="absolute bottom-0 right-0 h-2.5 w-2.5 bg-emerald-400 border-2 border-emerald-600 rounded-full"></span>
                 </div>
                 <div>
@@ -340,37 +302,37 @@ export default function Layout({ children, activeTab, setActiveTab }: LayoutProp
                   <p className="text-[11px] text-emerald-100">Typically replies in under 5 minutes</p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => setShowWhatsAppPopup(false)}
                 className="hover:bg-white/10 p-1 rounded-full text-white transition-colors"
               >
                 <X size={18} />
               </button>
             </div>
- 
+
             {/* Simulated Chat Area */}
             <div className="p-4 bg-neutral-50 space-y-3 text-xs max-h-60 overflow-y-auto">
               <div className="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-neutral-700 leading-relaxed border border-neutral-100">
                 Hi there! 👋 How can we help you today?
                 <span className="block text-[10px] text-neutral-400 mt-1">NexusOil Agent • Live</span>
               </div>
-              
+
               {/* Quick suggestions */}
               <div className="space-y-1.5 pt-1">
                 <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider">Frequently Asked Questions</p>
-                <button 
+                <button
                   onClick={() => setWhatsappMsg("Hello, I would like to get an Engine Oil quote for my car.")}
                   className="w-full text-left bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-100 px-3 py-2 rounded-xl font-medium transition-colors"
                 >
                   "Engine Oil Quote request"
                 </button>
-                <button 
+                <button
                   onClick={() => setWhatsappMsg("Hello, I need help matching a custom paint color code for my vehicle.")}
                   className="w-full text-left bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-100 px-3 py-2 rounded-xl font-medium transition-colors"
                 >
                   "Automotive Paint Color Matching"
                 </button>
-                <button 
+                <button
                   onClick={() => handleNavClick('quote')}
                   className="w-full text-left bg-neutral-100 hover:bg-neutral-200 text-neutral-800 border border-neutral-200 px-3 py-2 rounded-xl font-medium transition-colors"
                 >

@@ -14,7 +14,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '5W-30',
     price: 32500,
     volume: '5 Litres',
-    image: '/images/lp3.jpg',
+    image: '/images/lp13.jpg',
     compatibility: 'Modern petrol and diesel passenger cars, SUVs, light vans',
     description: 'Premium fully synthetic engine oil with Deposit Shield technology. Outstanding wear protection, engine cleanliness, and active fuel efficiency.'
   },
@@ -26,7 +26,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '5W-40',
     price: 35000,
     volume: '5 Litres',
-    image: '/images/lp4.jpg',
+    image: '/images/lp12.jpg',
     compatibility: 'High-performance gasoline and diesel engines, turbocharged models',
     description: 'Advanced fully synthetic formula providing active thermal stability and superior wear defense under extreme heat.'
   },
@@ -38,7 +38,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '0W-20',
     price: 38000,
     volume: '4 Litres',
-    image: '/images/lp4.jpg',
+    image: '/images/lp10.jpg',
     compatibility: 'Modern hybrid and highly efficient downsized petrol engines',
     description: 'Ultra-low viscosity fully synthetic oil designed to maximize fuel economy and shield engine components at cold starts.'
   },
@@ -50,7 +50,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '15W-40',
     price: 28500,
     volume: '5 Litres',
-    image: '/images/lp4.jpg',
+    image: '/images/lp10.jpg',
     compatibility: 'Heavy-duty diesel engines, commercial fleets, SUVs and pickups',
     description: 'Premium synthetic technology heavy-duty engine oil offering outstanding soot dispersancy and component wear protection.'
   },
@@ -62,7 +62,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '10W-40',
     price: 24500,
     volume: '5 Litres',
-    image: '/images/lp4.jpg',
+    image: '/images/lp12.jpg',
     compatibility: 'Daily driver passenger cars and SUVs operating in warm climates',
     description: 'Formulated with high-quality synthetic and mineral base stocks to shield engines against sludge and carbon deposits.'
   },
@@ -74,7 +74,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '20W-50',
     price: 19500,
     volume: '5 Litres',
-    image: '/images/lp4.jpg',
+    image: '/images/lp13.jpg',
     compatibility: 'High-mileage passenger cars, older petrol/diesel vehicles',
     description: 'Thicker viscosity mineral oil formulated specifically to reduce oil leaks, seal rings, and minimize smoke in high-mileage engines.'
   },
@@ -86,7 +86,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '15W-40',
     price: 480000,
     volume: '208 Litres',
-    image: '/images/lp5.jpg',
+    image: '/images/lp10.jpg',
     compatibility: 'Commercial transport trucks, agricultural machinery, construction fleets',
     description: 'Industrial-grade bulk steel drum containing heavy-duty diesel engine oil for maximum fleet wear protection.'
   },
@@ -98,7 +98,7 @@ export const FEATURED_OILS: EngineOil[] = [
     viscosity: '20W-50',
     price: 16500,
     volume: '4 Litres',
-    image: '/images/lp4.jpg',
+    image: '/images/lp13.jpg',
     compatibility: 'Daily driving passenger cars, classic and older engines',
     description: 'Reliable engine protection with high thermal stability to withstand hot tropical climates.'
   }
